@@ -1,0 +1,13 @@
+<div class="cesta-detalhe">
+  <h2>Itens da Cesta</h2>
+  
+  <ul>
+    <li *ngFor="let item of cesta.itens">
+      <span>{{ item.produto.nome }} - Quantidade: {{ item.quantidade }} - R$ {{ item.valorTotalItem }}</span>
+      <!-- Botão X para remover o item -->
+      <button class="btn-remover" (click)="removerItemDaCesta(item)">X</button>
+    </li>
+  </ul>
+
+  <h3>Valor Total: R$ {{ cesta.valorTotal }}</h3>
+</div>
